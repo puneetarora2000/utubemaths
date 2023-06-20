@@ -5,7 +5,7 @@ We are building a web app that integrates with YouTube data API to provide in-de
 
 Domain Specific Creators can use this tool to monitor their channel's progress, identify trends, optimize their content strategy, and make data-driven decisions to maximize their reach and revenue.
 
-## Proposed Key Features ![image](https://github.com/puneetarora2000/utubemaths/assets/98385813/2da9ff06-bf45-49a6-bbad-007f3579c124)
+## Some Proposed Key Features ![image](https://github.com/puneetarora2000/utubemaths/assets/98385813/2da9ff06-bf45-49a6-bbad-007f3579c124)
 
 1.	**Analytics Overview**: Provide a snapshot of key metrics, such as views, watch time, likes, comments, and subscriber count, giving creators an instant overview of their channel's performance.
 2.	**Video Performance Analysis**: Offer detailed analytics for individual videos, including engagement metrics, audience retention, click-through rates, and suggested videos data. Identify which videos perform best and provide recommendations for optimization.
