@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Analytics App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="table-users">
+   <div class="header">Result</div>
+   <div>
+    <h2>Most Liked Video</h2>
+    <p>Title: {{ most_liked_video }}</p>
+    <p>URL: <a href="{{ url_most_liked }}">{{ url_most_liked }}</a></p>
+    <p>Number of Likes: {{ num_likes }}</p>
+  </div>
+
+  <div>
+    <h2>Most Viewed Video</h2>
+    <p>Title: {{ most_viewed_video }}</p>
+    <p>URL: <a href="{{ url_most_viewed }}">{{ url_most_viewed }}</a></p>
+    <p>Number of Views: {{ num_views }}</p>
+  </div>
+
+  <div>
+    <h2>Total Likes</h2>
+    <p>{{ Total_likes }}</p>
+  </div>
+
+  <div>
+    <h2>Total Views</h2>
+    <p>{{ Total_views }}</p>
+  </div>
+
+  <div>
+    <h2>Total Comments</h2>
+    <p>{{ Total_comments }}</p>
+  </div>
+
+  <div>
+    <h2>Average Likes</h2>
+    <p>{{ Average_likes }}</p>
+  </div>
+
+  <div>
+    <h2>Average Views</h2>
+    <p>{{ Average_views }}</p>
+  </div>
+
+  <div>
+    <h2>Average Comments</h2>
+    <p>{{ Average_comments }}</p>
+  </div>
+
+  <div>
+    <h2>Likes-to-views ratio</h2>
+    <p>{{ Likes_2_views_ratio }}</p>
+  </div>
+
+  <div>
+    <h2>Comments-to-views ratio</h2>
+    <p>{{ Comments_2_views_ratio }}</p>
+  </div>
+
+</div>
+</body>
+</html>
