@@ -1,0 +1,68 @@
+<!-- dashboard.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Channel Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <h1>YouTube Channel Dashboard</h1>
+    
+    <h2>Channel Information</h2>
+    <p>Channel Name: {{ channel_name }}</p>
+    <p>Subscriber Count: {{ subscriber_count }}</p>
+    <p>Total Views: {{ total_views }}</p>
+    
+    <h2>Video Statistics</h2>
+    <div class="statistics-grid">
+        <div class="statistics-item">
+            <h3>Mean Views</h3>
+            <p>{{ video_stats.loc['mean', 'views'] }}</p>
+        </div>
+        <div class="statistics-item">
+            <h3>Median Views</h3>
+            <p>{{ video_stats.loc['50%', 'views'] }}</p>
+        </div>
+        <div class="statistics-item">
+            <h3>Mode Views</h3>
+            <p>{{ video_stats['views'].mode().values[0] }}</p>
+        </div>
+    </div>
+    
+    <h2>Most Viewed Video</h2>
+    <p>Title: {{ most_viewed_video['title'] }}</p>
+    <p>Views: {{ most_viewed_video['views'] }}</p>
+    
+    <h2>Most Liked Video</h2>
+    <p>Title: {{ most_liked_video['title'] }}</p>
+    <p>Likes: {{ most_liked_video['likes'] }}</p>
+    
+    <h2>Least Viewed Video</h2>
+    <p>Title: {{ least_viewed_video['title'] }}</p>
+    <p>Views: {{ least_viewed_video['views'] }}</p>
+    
+    <h2>Popular Videos in Last 30 Days</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Views</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for video in popular_videos_last_30_days.iterrows() %}
+            <tr>
+                <td>{{ video[1]['title'] }}</td>
+                <td>{{ video[1]['views'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <h2>Video Views in Last 30 Days</h2>
+    <div class="graph-container">
+        <img src="{{ url_for('static', filename=views_last_30_days_graph) }}" alt="Video Views in Last 30 Days">
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+/* Apply grid layout */
+.statistics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.statistics-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.graph-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Apply custom colors */
+body {
+  background-color: #f2f2f2;
+  color: #333333;
+}
+
+h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: Arial, sans-serif;
+  margin: 5px 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #dddddd;
+  font-weight: bold;
+}
+
+/* Apply custom fonts */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
